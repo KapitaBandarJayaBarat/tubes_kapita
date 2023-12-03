@@ -31,8 +31,9 @@
                     <thead>
                         <tr>
                             <th>No</th>
-                            <th>Judul</th>
-                            <th>Konten</th>
+                            <th style="width: 30%">Judul</th>
+                            <th style="width: 50%">Konten</th>
+                            <th style="width: 20%">Action</th>
                         </tr>
                     </thead>
                     <tbody>

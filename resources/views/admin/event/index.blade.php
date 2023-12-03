@@ -32,6 +32,8 @@
                         <tr>
                             <th>No</th>
                             <th>Nama Event</th>
+                            <th>Tanggal Event</th>
+                            <th>Action</th>
                         </tr>
                     </thead>
                     <tbody>
@@ -39,6 +41,7 @@
                             <tr>
                                 <td>{{ $event->firstItem() + $data}}</td>
                                 <td>{{ $value->nama_event }}</td>
+                                <td>{{ $value->tgl }}</td>
                                 <td>
                                     <a href="{{route('admin.event.edit', $value->id) }}" class="btn btn-light-primary">Edit</a>
                                     <a href="{{route('admin.event.show', $value->id) }}" class="btn btn-light-success">Read</a>

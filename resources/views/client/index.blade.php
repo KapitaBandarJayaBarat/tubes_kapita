@@ -7,7 +7,7 @@
     <div class="row">
         @foreach ($artikel as $value)
             <div class="col-sm">
-                <figure class="newsCard">
+                <figure class="newsCard mx-auto">
                     <div class="image"><img src="{{ asset('storage/artikel/'.$value->foto) }}"/></div>
                     <figcaption>
                         <div class="date"><span class="day">{{ $value->day }}</span><span class="month">{{ $value->month }}</div>

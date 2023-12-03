@@ -2,6 +2,10 @@
 
 namespace App\Http\Controllers\Admin;
 
+use App\Models\artikel;
+use App\Models\event;
+use App\Models\galeri;
+use App\Models\profile;
 use App\Http\Controllers\Controller;
 use Illuminate\Support\Facades\DB;
 use App\Models\Capres;
@@ -14,7 +18,11 @@ class AdminCMSController extends Controller
      */
     public function index()
     {
-        return view('admin.index');
+        $event = event::count();
+        $artikel = artikel::count();
+        $galeri = galeri::count();
+        $profile = profile::count();
+        return view('admin.index', compact('event', 'artikel', 'galeri', 'profile'));
     }
 
     /**

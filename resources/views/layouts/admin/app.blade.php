@@ -27,7 +27,7 @@
     <div class="sidebar-header position-relative">
         <div class="d-flex justify-content-between align-items-center">
             <div class="logo">
-                <a href="#">Admin</a>
+                <a href="{{route('admin.cms.index') }}"><img src="{{ asset("assets/images/lampung-tengah6.png") }}" height="80" alt="Logo"></a>
             </div>
             <div class="theme-toggle d-flex gap-2  align-items-center mt-2">
                 <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true"
@@ -67,28 +67,28 @@
             <li class="sidebar-title">Menu</li>
 
             <li
-                class="sidebar-item hashup">
+                class="sidebar-item {{ Request::routeIs('admin.cms.index') ? 'active' : '' }} hashup">
                 <a href="{{route('admin.cms.index') }}" class='sidebar-link'>
                     <i class="bi bi-grid-fill"></i>
                     <span>Dashboard</span>
                 </a>
             </li>
 
-            <li class="sidebar-item  has-sub">
+            <li class="sidebar-item @if(Request::routeIs('admin.profile.index')) active @elseif (Request::routeIs('admin.profile.create')) active @endif has-sub">
                 <a href="#" class='sidebar-link'>
                     <i class="bi bi-person-circle"></i>
                     <span>Profile</span>
                 </a>
 
-                <ul class="submenu ">
-                    <li class="submenu-item ">
+                <ul class="submenu @if(Request::routeIs('admin.profile.index')) submenu-open @elseif (Request::routeIs('admin.profile.create')) submenu-open @endif">
+                    <li class="submenu-item {{ Request::routeIs('admin.profile.create') ? 'active' : '' }}">
                         <!-- Modal toggle -->
                         <a href="{{ route('admin.profile.create') }}" class="submenu-link">
                             <i class="bi bi-person-badge-fill"></i> Buat Profile
                         </a>
                     </li>
 
-                    <li class="submenu-item">
+                    <li class="submenu-item {{ Request::routeIs('admin.profile.index') ? 'active' : '' }}">
                         <a href="{{ route('admin.profile.index') }}" class="submenu-link">
                             <i class="bi bi-person-badge-fill"></i> Kelola Profile
                         </a>
@@ -96,109 +96,69 @@
                 </ul>
             </li>
 
-            <li class="sidebar-item  has-sub">
+            <li class="sidebar-item @if(Request::routeIs('admin.galeri.index')) active @elseif (Request::routeIs('admin.galeri.create')) active @endif has-sub">
                 <a href="#" class='sidebar-link'>
                     <i class="bi bi-image"></i>
                     <span>Galeri</span>
                 </a>
 
-                <ul class="submenu ">
-                    <li class="submenu-item ">
+                <ul class="submenu @if(Request::routeIs('admin.galeri.index')) submenu-open @elseif (Request::routeIs('admin.galeri.create')) submenu-open @endif">
+                    <li class="submenu-item {{ Request::routeIs('admin.galeri.create') ? 'active' : '' }}">
                         <!-- Modal toggle -->
                         <a href="{{ route('admin.galeri.create') }}" class="submenu-link">
                             <i class="bi bi-image"></i> Buat Galeri
                         </a>
                     </li>
 
-                    <li class="submenu-item">
+                    <li class="submenu-item {{ Request::routeIs('admin.galeri.index') ? 'active' : '' }}">
                         <a href="{{ route('admin.galeri.index') }}" class="submenu-link">
                             <i class="bi bi-image"></i> Kelola Galeri
                         </a>
                     </li>
                 </ul>
             </li>
-            <li class="sidebar-item  has-sub">
+            <li class="sidebar-item @if(Request::routeIs('admin.artikel.index')) active @elseif (Request::routeIs('admin.artikel.create')) active @endif has-sub">
                 <a href="#" class='sidebar-link'>
                     <i class="bi bi-newspaper"></i>
                     <span>Artikel</span>
                 </a>
 
-                <ul class="submenu ">
-                    <li class="submenu-item ">
+                <ul class="submenu @if(Request::routeIs('admin.artikel.index')) submenu-open @elseif (Request::routeIs('admin.artikel.create')) submenu-open @endif">
+                    <li class="submenu-item {{ Request::routeIs('admin.artikel.create') ? 'active' : '' }}">
                         <!-- Modal toggle -->
                         <a href="{{ route('admin.artikel.create') }}" class="submenu-link">
                             <i class="bi bi-circle"></i> Buat Artikel
                         </a>
                     </li>
 
-                    <li class="submenu-item">
+                    <li class="submenu-item {{ Request::routeIs('admin.artikel.index') ? 'active' : '' }}">
                         <a href="{{ route('admin.artikel.index') }}" class="submenu-link">
                             <i class="bi bi-circle"></i> Kelola Artikel
                         </a>
                     </li>
                 </ul>
             </li>
-            <li class="sidebar-item  has-sub">
+            <li class="sidebar-item @if(Request::routeIs('admin.event.index')) active @elseif (Request::routeIs('admin.event.create')) active @endif has-sub">
                 <a href="#" class='sidebar-link'>
                     <i class="bi bi-calendar-event"></i>
                     <span>Event</span>
                 </a>
 
-                <ul class="submenu ">
-                    <li class="submenu-item ">
+                <ul class="submenu @if(Request::routeIs('admin.event.index')) submenu-open @elseif (Request::routeIs('admin.event.create')) submenu-open @endif">
+                    <li class="submenu-item {{ Request::routeIs('admin.event.create') ? 'active' : '' }}">
                         <!-- Modal toggle -->
                         <a href="{{ route('admin.event.create') }}" class="submenu-link">
                             <i class="bi bi-calendar-event"></i> Buat Event
                         </a>
                     </li>
 
-                    <li class="submenu-item">
+                    <li class="submenu-item {{ Request::routeIs('admin.event.index') ? 'active' : '' }}">
                         <a href="{{ route('admin.event.index') }}" class="submenu-link">
                             <i class="bi bi-calendar-event"></i> Kelola Event
                         </a>
                     </li>
                 </ul>
             </li>
-            {{-- <li class="sidebar-item  has-sub">
-                <a href="#" class='sidebar-link'>
-                    <i class="bi bi-building"></i>
-                    <span>Gedung</span>
-                </a>
-
-                <ul class="submenu ">
-                    <li class="submenu-item ">
-                        <a href="" class="submenu-link">
-                            <i class="bi bi-building-fill-add"></i>Tambah Gedung
-                        </a>
-                    </li>
-
-                    <li class="submenu-item">
-                        <a href="" class="submenu-link">
-                            <i class="bi bi-building-fill"></i> Kelola Gedung
-                        </a>
-                    </li>
-                </ul>
-            </li>
-            <li class="sidebar-item  has-sub">
-                <a href="#" class='sidebar-link'>
-                    <i class="bi bi-people"></i>
-                    <span>Program studi</span>
-                </a>
-
-                <ul class="submenu ">
-                    <li class="submenu-item ">
-                        <a href="" class="submenu-link">
-                            <i class="bi bi-people-fill"></i>Tambah Program Studi
-                        </a>
-                    </li>
-
-                    <li class="submenu-item">
-                        <a href="" class="submenu-link">
-                            <i class="bi bi-people-fill"></i> Kelola Program Studi
-                        </a>
-                    </li>
-                </ul>
-            </li> --}}
             <li
                 class="sidebar-item">
                 <a href="{{ route('logout') }}" class='sidebar-link'>

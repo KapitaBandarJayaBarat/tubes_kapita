@@ -32,13 +32,14 @@
                         <tr>
                             <th>No</th>
                             <th>Foto</th>
+                            <th>Action</th>
                         </tr>
                     </thead>
                     <tbody>
                         @foreach ($galeri as $data => $value)
                             <tr>
                                 <td>{{ $galeri->firstItem() + $data}}</td>
-                                <td><img src="{{ asset('storage/galeri/'.$value->foto) }}" alt="hayo" style="width: 30px; object-fit: cover;"></td>
+                                <td><img src="{{ asset('storage/galeri/'.$value->foto) }}" alt="hayo" style="width: 100px; object-fit: cover;"></td>
                                 <td>
                                     <a href="{{route('admin.galeri.edit', $value->id) }}" class="btn btn-light-primary">Edit</a>
                                     <a href="{{route('admin.galeri.show', $value->id) }}" class="btn btn-light-success">Read</a>

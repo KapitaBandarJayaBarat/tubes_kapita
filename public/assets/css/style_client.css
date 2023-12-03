@@ -9,6 +9,15 @@ body {
   margin: 0;
   font-family: 'Raleway', Arial, sans-serif;
 }
+.bg-overlay {
+    background: linear-gradient(rgba(0,0,0,.7), rgba(0,0,0,.7)), url("../images/kantor_kelurahan.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+    color: #fff;
+    height: 450px;
+    padding-top: 50px;
+}
 
 .titlePage {
   font-family: Aileron Heavy;
@@ -20,30 +29,34 @@ a:hover {
   color: #FFF !important;
 }
 .jumbotron {
-  background-image: url("../images/kantor_kelurahan.png");
-  background-size: cover;
-  height: 500px;
+    background: linear-gradient(rgba(0, 0, 0, 0.32), rgba(0, 0, 0, 0.32)), url("../images/kantor_kelurahan.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+    color: #fff;
+    margin-bottom: 0px;
+    display: flex;
 }
 .jumbotron .container .display-4 {
   font-family: Aileron Heavy;
   color: #FFF;
   font-size: 90px;
   position: relative;
-  top: 100px;
+  margin: 0;
 }
 .jumbotron .container .lead-1 {
   font-family: 'Raleway', Arial, sans-serif;
   color: #FFF;
   font-size: 20px;
   position: relative;
-  top: 130px;
+  margin: 0;
 }
 .jumbotron .container .lead-2 {
   font-family: 'Raleway', Arial, sans-serif;
   color: #FFF;
   font-size: 20px;
   position: relative;
-  top: 80px;
+  margin: 0;
 }
 /* NOTE: Header Fixed */
 .top-container {
@@ -300,11 +313,29 @@ a:hover {
   margin:0
 }
 @media (max-width:991px) {
+    .jumbotron .container .lead-1 {
+        font-size: 15px;
+    }
+    .jumbotron .container .display-4 {
+        font-size: 70px;
+    }
+    .jumbotron .container .lead-2 {
+        font-size: 15px;
+    }
   .site-footer [class^=col-] {
     margin-bottom:30px
   }
 }
-@media (max-width:767px) {
+@media (max-width:760px) {
+    .jumbotron .container .lead-1 {
+        font-size: 13px;
+    }
+    .jumbotron .container .display-4 {
+        font-size: 60px;
+    }
+    .jumbotron .container .lead-2 {
+        font-size: 13px;
+    }
   .site-footer {
     padding-bottom:0
   }

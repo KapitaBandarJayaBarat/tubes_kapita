@@ -10,14 +10,14 @@
 	<link rel="stylesheet" href="{{ asset("assets/css/style_client.css") }}">
 </head>
 <body>
-	<div class="top-container" style="background: #0000">
-		<div class="jumbotron jumbotron-fluid" style="margin-bottom: 0px;">
+	<div class="top-container" style="background: #0000;">
+        <div class="jumbotron">
 		  <div class="container">
 				<p class="lead-1"><b>Website Kelurahan</b></p>
-		    <h1 class="display-4"><b>Bandar Jaya Barat</b></h1>
-		    <p class="lead-2">Bandar Jaya Barat, Terbanggi Besar, Lampung Tengah, Lampung</p>
+                <h1 class="display-4"><b>Bandar Jaya Barat</b></h1>
+                <p class="lead-2">Bandar Jaya Barat, Terbanggi Besar, Lampung Tengah, Lampung</p>
 		  </div>
-		</div>
+        </div>
 	</div>
 	<div class="header" id="myHeader">
 		<nav class="navbar navbar-expand-lg navbar-dark">
@@ -29,12 +29,12 @@
 			</button>
 			<div class="collapse navbar-collapse" id="navbarSupportedContent">
 				<ul class="navbar-nav mr-auto navMenu">
-					<li class="current"><a href="{{ Request::routeIs('beranda') ? '#' : '/' }}" data-hover="Beranda">Beranda</a></li>
-					<li><a href="{{ Request::routeIs('berita.') ? '#' : '/berita/view' }}" data-hover="Berita">Berita</a></li>
-					<li><a href="{{ Request::routeIs('profile.') ? '#' : '/profile' }}" data-hover="Profil">Profil</a></li>
-					<li><a href="{{ Request::routeIs('galeri.') ? '#' : '/galeri' }}" data-hover="Galeri">Galeri</a></li>
-					<li><a href="{{ Request::routeIs('evnet.') ? '#' : '/event' }}" data-hover="Event">Event</a></li>
-					<li><a href="{{ Request::routeIs('kontak.') ? '#' : '/kontak' }}" data-hover="Kontak">Kontak</a></li>
+					<li class="{{ Request::routeIs('beranda') ? 'current' : '' }}"><a href="{{ Request::routeIs('beranda') ? '#' : '/' }}" data-hover="Beranda">Beranda</a></li>
+					<li class="{{ Request::routeIs('berita.') ? 'current' : '' }}"><a href="{{ Request::routeIs('berita.') ? '#' : '/berita/view' }}" data-hover="Berita">Berita</a></li>
+					<li class="{{ Request::routeIs('profile.') ? 'current' : '' }}"><a href="{{ Request::routeIs('profile.') ? '#' : '/profile' }}" data-hover="Profil">Profil</a></li>
+					<li class="{{ Request::routeIs('galeri.') ? 'current' : '' }}"><a href="{{ Request::routeIs('galeri.') ? '#' : '/galeri' }}" data-hover="Galeri">Galeri</a></li>
+					<li class="{{ Request::routeIs('event.') ? 'current' : '' }}"><a href="{{ Request::routeIs('event.') ? '#' : '/event' }}" data-hover="Event">Event</a></li>
+					<li class="{{ Request::routeIs('kontak.') ? 'current' : '' }}"><a href="{{ Request::routeIs('kontak.') ? '#' : '/kontak' }}" data-hover="Kontak">Kontak</a></li>
 				</ul>
 			</div>
 		</nav>
@@ -46,10 +46,10 @@
 	<footer class="site-footer">
 		<div class="container">
 			<div class="row">
-				<div class="col-xs-6 col-md-2">
+				<div class="col-xs-6 col-md-3">
 					<img src="{{ asset('assets/images/lampung-tengah6.png') }}" height="150" class="float-left" alt="Logo" id="logontb" draggable="false">
 				</div>
-				<div class="col-sm-12 col-md-7">
+				<div class="col-sm-12 col-md-6">
 					<h6>Tentang Bandar Jaya Barat</h6>
 					<p class="text-justify">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Optio ea itaque voluptatum doloremque consequatur corporis reprehenderit! Accusantium aliquid numquam corrupti, inventore voluptatem impedit magni neque dicta, deserunt, natus enim sit.</p>
 				</div>

@@ -27,7 +27,13 @@ class AdminProfileController extends Controller
      */
     public function create()
     {
-        return view('admin.profile.create');
+        $profile = profile::count();
+        if($profile > 0){
+            $profile = profile::paginate(5);
+            return redirect(route('admin.profile.index'))->with('check', 'Data Profile Telah Dibuat Silahkan Ubah Data Yang Ada Atau Hapus Data Yang Sudah Ada', compact('profile'));
+        }else{
+            return view('admin.profile.create');
+        }
     }
 
     /**
