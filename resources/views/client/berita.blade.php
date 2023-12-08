@@ -10,7 +10,7 @@
     <ul class="list-unstyled">
         @foreach ($artikel as $value)
             <li class="media">
-                <img class="mr-3 img-thumbnail rounded w-25 p-3" src="{{ asset('storage/artikel/'.$value->foto) }}">
+                <img class="mr-3 img-thumbnail rounded w-25 p-3" src="{{ asset('storage/public/artikel/'.$value->foto) }}">
                 <div class="media-body">
                     <h5 class="mt-0 mb-1 titlePage">{{ $value->judul }}</h5>
                     {!! substr(strip_tags($value->content, '<p>'), 0, strpos(strip_tags($value->content, '<p>'), '</p>') + 4) !!}

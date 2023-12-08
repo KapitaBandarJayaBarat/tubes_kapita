@@ -39,7 +39,7 @@
                         <h1 class="text-center titlePage">{{ $event->nama_event }}</h1>
                         <p class="text-center">{{ $event->tgl }}</p>
                         <div class="text-center">
-                            <img src="{{ asset('storage/event/'.$event->foto) }}">
+                            <img src="{{ asset('storage/public/event/'.$event->foto) }}">
                         </div>
                     </div>
                 </div>

@@ -10,7 +10,7 @@
         <h1 class="text-center titlePage">{{ $artikel->judul }}</h1>
         <p class="text-center">{{ $artikel->tgl }}</p>
         <div class="text-center">
-            <img src="{{ asset('storage/artikel/'.$artikel->foto) }}" width="70%">
+            <img src="{{ asset('storage/public/artikel/'.$artikel->foto) }}" width="70%">
         </div>
         <br>
         {!! $artikel->content !!}
