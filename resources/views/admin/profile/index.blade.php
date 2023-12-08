@@ -52,7 +52,8 @@
                             <tr>
                                 <td>{{ $profile->firstItem() + $data}}</td>
                                 <td>{{ $value->nama_kelurahan }}</td>
-                                <td>{!! $value->content !!}</td>
+                                <td>
+                                    {!! substr(strip_tags($value->content, '<p>'), 0, strpos(strip_tags($value->content, '<p>'), '</p>') + 4) !!}</td>
                                 <td>
                                     <a href="{{route('admin.profile.edit', $value->id) }}" class="btn btn-light-primary">Edit</a>
                                     <a href="{{route('admin.profile.show', $value->id) }}" class="btn btn-light-success">Read</a>

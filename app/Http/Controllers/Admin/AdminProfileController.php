@@ -97,21 +97,27 @@ class AdminProfileController extends Controller
 
 
         $profile = profile::where('id', $id)->first();
-        if ($request->hasFile('foto')) {
-            $detination_path = 'public/artikel';
-            $image = $request->file('foto');
-            $imageName = time() . '_' . $image->getClientOriginalName();
-            $image->storeAs($detination_path, $imageName);
-            $filePath = 'artikel/'.$profile->foto;
-            if (Storage::disk('public')->exists($filePath)) {
-                Storage::disk('public')->delete($filePath);
-            }
+        // if ($request->hasFile('foto')) {
+        //     $detination_path = 'public/artikel';
+        //     $image = $request->file('foto');
+        //     $imageName = time() . '_' . $image->getClientOriginalName();
+        //     $image->storeAs($detination_path, $imageName);
+        //     $filePath = 'artikel/'.$profile->foto;
+        //     if (Storage::disk('public')->exists($filePath)) {
+        //         Storage::disk('public')->delete($filePath);
+        //     }
+        //     $profile->update([
+        //         'judul' => $request->judul,
+        //         'tgl' => $request->tgl,
+        //         'foto' => $request->foto,
+        //         'content' => $request->content
+        //     ]);
+        // }
             $profile->update([
                 'judul' => $request->judul,
                 'tgl' => $request->tgl,
                 'content' => $request->content
             ]);
-        }
         return redirect(route('admin.profile.index'))->with('sukses', 'Berhasil Ubah Data!');
     }
 

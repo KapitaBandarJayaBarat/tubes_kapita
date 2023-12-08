@@ -9,7 +9,7 @@
     <div class="row">
         @foreach ($galeri as $value)
             <div class="col-sm  text-center">
-                <img src="{{ asset('storage/galeri/'.$value->foto) }}" class="galeri" style="width:100%;max-width:300px">
+                <img src="{{ asset('../storage/galeri/'.$value->foto) }}" class="galeri" style="width:100%;max-width:300px">
             </div>
         @endforeach
     </div>

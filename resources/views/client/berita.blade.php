@@ -12,10 +12,10 @@
             <li class="media">
                 <img class="mr-3 img-thumbnail rounded w-25 p-3" src="{{ asset('storage/artikel/'.$value->foto) }}">
                 <div class="media-body">
-                <h5 class="mt-0 mb-1 titlePage">{{ $value->judul }}</h5>
-                {!! $value->content !!}
-                        <p><a href="{{ Request::routeIs('berita') ? '#' : '/berita/view/'.$value->judul }}" class="text-dark">Baca selengkapnya</a></p>
-                    </div>
+                    <h5 class="mt-0 mb-1 titlePage">{{ $value->judul }}</h5>
+                    {!! substr(strip_tags($value->content, '<p>'), 0, strpos(strip_tags($value->content, '<p>'), '</p>') + 4) !!}
+                    <p><a href="{{ Request::routeIs('berita') ? '#' : '/berita/view/'.$value->judul }}" class="text-dark">Baca selengkapnya</a></p>
+                </div>
             </li>
         @endforeach
     </ul>

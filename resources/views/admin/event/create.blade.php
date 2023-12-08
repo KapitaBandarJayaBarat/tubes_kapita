@@ -66,7 +66,7 @@
                         <div class="col-md-12 col-12">
                             <div class="form-group mandatory @error('tgl_for_set') is-invalid @enderror">
                                 <label for="tgl_for_set" class="form-label">Tanggal Event</label>
-                                <input type="datetime-local" id="tgl_for_set-column" class="form-control @error('tgl_for_set') is-invalid @enderror" placeholder="Pilih Tanggal Berapa event Dilaksanakan" name="tgl_for_set" value="{{ old('tgl_for_set') }}" min="{{ now()->format('Y-m-d\TH:i') }}" required>
+                                <input type="datetime-local" id="tgl_for_set-column" class="form-control @error('tgl_for_set') is-invalid @enderror" placeholder="Pilih Tanggal Berapa event Dilaksanakan" name="tgl_for_set" value="{{ old('tgl_for_set') }}" required>
                                 @error('tgl')
                                     <div class="invalid-feedback">
                                         {{ $message }}

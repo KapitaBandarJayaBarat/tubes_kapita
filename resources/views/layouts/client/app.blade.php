@@ -51,7 +51,7 @@
 				</div>
 				<div class="col-sm-12 col-md-6">
 					<h6>Tentang Bandar Jaya Barat</h6>
-					<p class="text-justify">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Optio ea itaque voluptatum doloremque consequatur corporis reprehenderit! Accusantium aliquid numquam corrupti, inventore voluptatem impedit magni neque dicta, deserunt, natus enim sit.</p>
+					<p class="text-justify">Kelurahan Bandar Jaya Barat adalah salah satu kelurahan di Kecamatan Terbanggi Besar, Kabupaten Lampung Tengah, Provinsi Lampung. Kelurahan ini memiliki luas wilayah 10,16 kilometer persegi dan berpenduduk sekitar 10.000 jiwa. Kelurahan Bandar Jaya Barat merupakan salah satu sentra perdagangan dan jasa di Kabupaten Lampung Tengah.</p>
 				</div>
 				<div class="col-xs-6 col-md-3">
 					<h6>Menu Cepat</h6>
