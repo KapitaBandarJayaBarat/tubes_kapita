@@ -9,7 +9,7 @@
 
             <div class="col-sm">
                 <figure class="newsCard mx-auto">
-                    <div class="image"><img src="{{ asset('storage/public/artikel/'.$value->foto) }}"/></div>
+                    <div class="image"><img src="{{ asset('storage/artikel/'.$value->foto) }}"/></div>
                     <figcaption>
                         <div class="date"><span class="day">{{ $value->day }}</span><span class="month">{{ $value->month }}</div>
                         <h3>{{ $value->judul }}</h3>

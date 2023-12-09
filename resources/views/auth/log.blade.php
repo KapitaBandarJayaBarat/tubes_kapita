@@ -19,7 +19,7 @@
                         <div class="text-center mb-12">
                             <img src="{{ asset("assets/images/lampung-tengah6.png") }}" width="300px" alt="">
                           <h1 class="ls-tight font-bolder h2">
-                            Sign Up
+                            Sign In
                           </h1>
                           <p class="mt-2">Kelurahan Bandar Jaya Barat</p>
                         </div>

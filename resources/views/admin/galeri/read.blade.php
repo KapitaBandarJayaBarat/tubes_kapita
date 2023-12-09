@@ -36,7 +36,7 @@
                 <div class="content">
                     <div class="container">
                     <div class="text-center">
-                        <img src="{{ asset('storage/public/galeri/'.$value->foto) }}" alt="galeri">
+                        <img src="{{ asset('storage/galeri/'.$value->foto) }}" alt="galeri">
                     </div>
                     </div>
                 </div>

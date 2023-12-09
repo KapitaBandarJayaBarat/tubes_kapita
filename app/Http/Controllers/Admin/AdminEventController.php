@@ -55,7 +55,7 @@ class AdminEventController extends Controller
 
 
         if ($request->hasFile('foto')) {
-            $detination_path = 'public/event';
+            $detination_path = 'storage/event';
             $image = $request->file('foto');
             $imageName = time() . '_' . $image->getClientOriginalName();
             $image->storeAs($detination_path, $imageName);
@@ -112,7 +112,7 @@ class AdminEventController extends Controller
 
         $event = event::where('id', $id)->first();
         if ($request->hasFile('foto')) {
-            $detination_path = 'public/event';
+            $detination_path = 'storage/event';
             $image = $request->file('foto');
             $imageName = time() . '_' . $image->getClientOriginalName();
             $image->storeAs($detination_path, $imageName);
