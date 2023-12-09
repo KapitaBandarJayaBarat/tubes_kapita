@@ -7,7 +7,7 @@
 <div class="container">
     <br>
     @foreach ($profile as $value)
-        <h1 class="text-center titlePage">{{ $value->nama_kelurahan }}</h1>
+        <h1 class="text-center titlePage">Profile Kelurahan {{ $value->nama_kelurahan }}</h1>
         {!! $value->content !!}
     @endforeach
 </div>
