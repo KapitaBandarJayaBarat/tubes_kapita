@@ -60,7 +60,7 @@ class AdminArtikelController extends Controller
         $day = $carbonDate->format('d');
         $month = $carbonDate->format('M');
         if ($request->hasFile('foto')) {
-            $detination_path = 'storage/artikel';
+            $detination_path = 'public/artikel';
             $image = $request->file('foto');
             $imageName = time() . '_' . $image->getClientOriginalName();
             $image->storeAs($detination_path, $imageName);
@@ -126,7 +126,7 @@ class AdminArtikelController extends Controller
         $month = $carbonDate->format('M');
         $artikel = artikel::where('id', $id)->first();
         if ($request->hasFile('foto')) {
-            $detination_path = 'storage/artikel';
+            $detination_path = 'public/artikel';
             $image = $request->file('foto');
             $imageName = time() . '_' . $image->getClientOriginalName();
             $image->storeAs($detination_path, $imageName);

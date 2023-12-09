@@ -44,7 +44,7 @@ class AdminGaleriController extends Controller
 
 
         if ($request->hasFile('foto')) {
-            $detination_path = 'storage/galeri';
+            $detination_path = 'public/galeri';
             $image = $request->file('foto');
             $imageName = time() . '_' . $image->getClientOriginalName();
             $image->storeAs($detination_path, $imageName);
@@ -89,7 +89,7 @@ class AdminGaleriController extends Controller
 
         $galeri = galeri::where('id', $id)->first();
         if ($request->hasFile('foto')) {
-            $detination_path = 'storage/galeri';
+            $detination_path = 'public/galeri';
             $image = $request->file('foto');
             $imageName = time() . '_' . $image->getClientOriginalName();
             $image->storeAs($detination_path, $imageName);
