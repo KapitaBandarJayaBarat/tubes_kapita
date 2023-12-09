@@ -443,13 +443,14 @@ a:hover {
 .snip1579 h3 {
   font-family: 'Raleway', Arial, sans-serif;
   text-transform: uppercase;
-  font-size: 20px;
+  font-size: 12px;
   font-weight: 400;
   line-height: 24px;
   margin: 3px 0;
 }
 .snip1579 h5 {
   font-weight: 400;
+  font-size: 10px;
   margin: 0;
   text-transform: uppercase;
   color: #bbb;

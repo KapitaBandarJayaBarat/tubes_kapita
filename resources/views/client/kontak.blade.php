@@ -7,7 +7,7 @@
     <br>
     <h1 class="text-center titlePage">Kontak Kelurahan</h1>
     <p><b>Lurah:</b> - | NIP. -</p>
-    <p><b>Alamat Kantor Camat:</b> Jl. Lintas Sumatra No.116, Bandar Jaya Tim., Kec. Terbanggi Besar, Kabupaten Lampung Tengah, Lampung.</p>
+    <p><b>Alamat Kantor :</b> Jl. Lintas Sumatra No.116, Bandar Jaya Tim., Kec. Terbanggi Besar, Kabupaten Lampung Tengah, Lampung.</p>
     <p><b>Nomor :</b> +62 -</p>
     <p><b>Email :</b> -</p>
     <hr>
