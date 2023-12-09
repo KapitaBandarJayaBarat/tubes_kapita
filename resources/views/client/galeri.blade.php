@@ -5,7 +5,7 @@
 @section('content')
 <div class="container">
     <br>
-    <h1 class="text-center titlePage">Galeri Desa</h1>
+    <h1 class="text-center titlePage">Galeri Kelurahan</h1>
     <div class="row">
         @foreach ($galeri as $value)
             <div class="col-sm  text-center">
